@@ -1,0 +1,26 @@
+.recipe {
+	padding: 1em;
+	background: #444a;
+	border-radius: 1em;
+}
+
+.imageBox {
+	position: relative;
+	height: 350px;
+	background: #666a;
+	border-radius: 1em;
+}
+
+.image {
+	padding: 1em;
+	object-fit: contain;
+}
+
+.title {
+	text-align: center;
+	margin-top: 1em;
+}
+
+.selected {
+	background: #aaaa;
+}

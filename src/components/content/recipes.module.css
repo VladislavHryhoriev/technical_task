@@ -1,0 +1,12 @@
+.recipes {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1em;
+	position: relative;
+}
+
+.image {
+}
+
+.name {
+}

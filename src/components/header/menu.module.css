@@ -1,0 +1,27 @@
+.menu {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.delete {
+	/* padding: 1em; */
+}
+
+.togglePage {
+	display: flex;
+	align-items: center;
+	padding: 1em 1.25em;
+	background: lightcoral;
+	color: #fff;
+	border-radius: 0.5em;
+}
+
+.togglePage:hover {
+	background: #bd6666;
+}
+
+.togglePage:disabled {
+	color: #aaa;
+	background: #bd6666;
+}
