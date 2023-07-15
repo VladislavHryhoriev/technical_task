@@ -70,6 +70,22 @@ const useRecipesStore = create((set) => ({
 		});
 	},
 
+	getRecipesList: async () => {
+		const fetchRecipes = useRecipesStore.getState().fetchRecipes;
+		let currentPage = 1;
+		let allRecipes = [];
+
+		while (true) {
+			const recipes = await fetchRecipes(currentPage);
+			if (recipes.length === 0) break;
+
+			allRecipes = allRecipes.concat(recipes);
+			currentPage++;
+		}
+
+		return allRecipes;
+	},
+
 	fetchRecipes: async (page) => {
 		try {
 			const response = await fetch(

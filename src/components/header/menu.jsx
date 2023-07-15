@@ -1,5 +1,4 @@
 import s from '@/components/header/menu.module.css';
-import getRecipes from '@/lib/getRecipes';
 import useRecipesStore from '@/store/recipesStore';
 import { FaAngleLeft, FaAngleRight, FaTrash } from 'react-icons/fa6';
 

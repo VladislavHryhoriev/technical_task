@@ -1,11 +1,12 @@
 import Logo from '@/components/header/logo';
 import Description from '@/components/placeholder/description';
-import getRecipes from '@/lib/getRecipes';
+import useRecipesStore from '@/store/recipesStore';
 import s from '@/styles/id.module.css';
 import Link from 'next/link';
 import { FaAngleLeft } from 'react-icons/fa6';
 
-const recipesList = await getRecipes();
+const getRecipesList = useRecipesStore.getState().getRecipesList;
+const recipesList = await getRecipesList();
 
 export async function getStaticPaths() {
 	const paths = recipesList.map((recipe) => ({
