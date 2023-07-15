@@ -1,4 +1,5 @@
 import s from '@/components/header/menu.module.css';
+import getRecipes from '@/lib/getRecipes';
 import useRecipesStore from '@/store/recipesStore';
 import { FaAngleLeft, FaAngleRight, FaTrash } from 'react-icons/fa6';
 
@@ -30,7 +31,7 @@ const Menu = () => {
 			<button
 				className={s.togglePage}
 				onClick={() => setPage('next')}
-				disabled={currentPage < 15 ? false : true}>
+				disabled={currentPage < 22 ? false : true}>
 				<FaAngleRight />
 			</button>
 		</nav>

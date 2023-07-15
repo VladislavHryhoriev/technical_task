@@ -27,7 +27,7 @@ const Recipe = ({ item }) => {
 				onContextMenu={handleRightClick}>
 				<div className={s.imageBox}>
 					<Image
-						src={item.image_url}
+						src={item.image_url || '/null.png'}
 						className={s.image}
 						fill
 						alt='recipe image'

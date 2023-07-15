@@ -3,7 +3,7 @@ import s from '@/components/placeholder/textbox.module.css';
 const Textbox = ({ recipe }) => {
 	return (
 		<div className={s.textbox}>
-			<h2 className={s.name}>{recipe.name}</h2>
+			<h2 className={s.name}>Beer Name: {recipe.name}</h2>
 			<p className={s.text}>
 				Tagline: <span className={s.span}>{recipe.tagline}</span>
 				<br />

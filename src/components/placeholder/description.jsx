@@ -9,7 +9,7 @@ const Description = ({ recipe }) => {
 				<div className={s.inner}>
 					<div className={s.imageBox}>
 						<Image
-							src={recipe.image_url}
+							src={recipe.image_url || '/null.png'}
 							className={s.image}
 							fill
 							alt='recipe image'

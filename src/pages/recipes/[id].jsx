@@ -1,25 +1,9 @@
 import Logo from '@/components/header/logo';
 import Description from '@/components/placeholder/description';
-import useRecipesStore from '@/store/recipesStore';
+import getRecipes from '@/lib/getRecipes';
 import s from '@/styles/id.module.css';
 import Link from 'next/link';
 import { FaAngleLeft } from 'react-icons/fa6';
-
-const getRecipes = async () => {
-	const fetchRecipes = useRecipesStore.getState().fetchRecipes;
-	let currentPage = 1;
-	let allRecipes = [];
-
-	while (true) {
-		const recipes = await fetchRecipes(currentPage);
-		if (recipes.length === 0) break;
-
-		allRecipes = allRecipes.concat(recipes);
-		currentPage++;
-	}
-
-	return allRecipes;
-};
 
 const recipesList = await getRecipes();
 
